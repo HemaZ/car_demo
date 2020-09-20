@@ -6,17 +6,20 @@
   <!-- Take topic names as arguments from YonoArc -->
   <arg name="front_camera" default="/prius/front_camera/image_raw" />
   <arg name="back_camera" default="/prius/back_camera/image_raw" />
-  <arg name="back_camera_info" default="/prius/back_camera_info" />
-  <arg name="front_camera_info" default="/prius/front_camera_info" />
+  <arg name="back_camera_info" default="/prius/back_camera/camera_info" />
+  <arg name="front_camera_info" default="/prius/front_camera/camera_info" />
   <arg name="center_laser" default="/prius/center_laser/scan" />
   <arg name="front_left_laser" default="/prius/front_left_laser/scan" />
   <arg name="front_right_laser" default="/prius/front_right_laser/scan" />
+  <!-- Car Location -->
+  <arg name="x" default="3" />
+  <arg name="y" default="-12" />
 
   <!-- Remap Topics based on YonoArc's arguments -->
   <remap from="/prius/front_camera/image_raw" to="$(arg front_camera)" />
   <remap from="/prius/back_camera/image_raw" to="$(arg back_camera)" />
-  <remap from="/prius/back_camera_info" to="$(arg back_camera_info)" />
-  <remap from="/prius/front_camera_info" to="$(arg front_camera_info)" />
+  <remap from="/prius/back_camera/camera_info" to="$(arg back_camera_info)" />
+  <remap from="/prius/front_camera/camera_info" to="$(arg front_camera_info)" />
   <remap from="/prius/center_laser/scan" to="$(arg center_laser)" />
   <remap from="/prius/front_left_laser/scan" to="$(arg front_left_laser)" />
   <remap from="/prius/front_right_laser/scan" to="$(arg front_right_laser)" />
@@ -39,7 +42,7 @@
   <node pkg="tf2_ros" type="static_transform_publisher" name="very_inaccurate_odom" args="0 0 0 0 0 0 odom base_link" />
   <node pkg="car_demo" type="joystick_translator" name="joystick_translator" />
 
-  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -x 3 -y -12 -z 0.5 -model prius" />
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -x $(arg x) -y $(arg y) -z 0.5 -model prius" />
 
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
 </launch>

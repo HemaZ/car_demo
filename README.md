@@ -1,6 +1,10 @@
 # Demo of Prius in ROS/GAZEBO
 
+<<<<<<< HEAD
 This is a simulation of a Prius in [gazebo 9](http://gazebosim.org) with sensor data being published using [ROS kinetic](http://wiki.ros.org/kinetic/Installation)
+=======
+This is a simulation of a Prius in [gazebo 9](http://gazebosim.org) with sensor data being published using [ROS melodic](http://wiki.ros.org/melodic/Installation)
+>>>>>>> 2d6741edb1be1b917dcae3c75fa75b1e82ee032a
 The car's throttle, brake, steering, and gear shifting are controlled by publishing a ROS message.
 A ROS node allows driving with a gamepad or joystick.
 
