@@ -8,6 +8,8 @@
   <arg name="back_camera" default="/prius/back_camera/image_raw" />
   <arg name="back_camera_info" default="/prius/back_camera/camera_info" />
   <arg name="front_camera_info" default="/prius/front_camera/camera_info" />
+  <arg name="right_camera" default="/prius/right_camera/image_raw" />
+  <arg name="left_camera" default="/prius/left_camera/image_raw" />
   <arg name="center_laser" default="/prius/center_laser/scan" />
   <arg name="front_left_laser" default="/prius/front_left_laser/scan" />
   <arg name="front_right_laser" default="/prius/front_right_laser/scan" />
@@ -18,6 +20,8 @@
   <!-- Remap Topics based on YonoArc's arguments -->
   <remap from="/prius/front_camera/image_raw" to="$(arg front_camera)" />
   <remap from="/prius/back_camera/image_raw" to="$(arg back_camera)" />
+  <remap from="/prius/right_camera/image_raw" to="$(arg right_camera)" />
+  <remap from="/prius/left_camera/image_raw" to="$(arg left_camera)" />
   <remap from="/prius/back_camera/camera_info" to="$(arg back_camera_info)" />
   <remap from="/prius/front_camera/camera_info" to="$(arg front_camera_info)" />
   <remap from="/prius/center_laser/scan" to="$(arg center_laser)" />
@@ -41,8 +45,8 @@
   </node>
   <node pkg="tf2_ros" type="static_transform_publisher" name="very_inaccurate_odom" args="0 0 0 0 0 0 odom base_link" />
   <node pkg="car_demo" type="joystick_translator" name="joystick_translator" />
-
+  <!-- <group ns="prius1"> -->
   <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -x $(arg x) -y $(arg y) -z 0.5 -model prius" />
-
+  <!-- </group> -->
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
 </launch>
