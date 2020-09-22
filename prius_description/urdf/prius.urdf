@@ -28,276 +28,276 @@
 
   <link name="base_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="base_link_connection" type="fixed">
-    <parent link="base_link"/>
-    <child link="chassis"/>
-    <origin xyz="1.45 0 0" rpy="0 0 1.57"/>
-    <axis xyz="1 0 0"/>
+    <parent link="base_link" />
+    <child link="chassis" />
+    <origin xyz="1.45 0 0" rpy="0 0 1.57" />
+    <axis xyz="1 0 0" />
   </joint>
 
   <link name="chassis">
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://prius_description/meshes/hybrid_body.obj" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://prius_description/meshes/hybrid_body.obj" scale="0.01 0.01 0.01" />
       </geometry>
     </visual>
 
     <collision name="chassis">
-      <origin xyz="0.0 0.05 0.625" rpy="0 0 0"/>
+      <origin xyz="0.0 0.05 0.625" rpy="0 0 0" />
       <geometry>
-        <box size="1.7526 2.1 0.95"/>
+        <box size="1.7526 2.1 0.95" />
       </geometry>
     </collision>
 
     <collision name="front_bumper">
-      <origin xyz="0.0 -2.0 0.458488" rpy="0.0 0 0"/>
+      <origin xyz="0.0 -2.0 0.458488" rpy="0.0 0 0" />
       <geometry>
-        <box size="1.337282 0.48 0.566691"/>
+        <box size="1.337282 0.48 0.566691" />
       </geometry>
     </collision>
 
     <collision name="hood">
-      <origin xyz="0.0 -1.900842 0.676305" rpy="0.341247 0 0"/>
+      <origin xyz="0.0 -1.900842 0.676305" rpy="0.341247 0 0" />
       <geometry>
-        <box size="1.597968 0.493107 0.265468"/>
+        <box size="1.597968 0.493107 0.265468" />
       </geometry>
     </collision>
 
     <collision name="windshield">
-      <origin xyz="0.0 -0.875105 1.032268" rpy="0.335476 0 0"/>
+      <origin xyz="0.0 -0.875105 1.032268" rpy="0.335476 0 0" />
       <geometry>
-        <box size="1.168381 1.654253 0.272347"/>
+        <box size="1.168381 1.654253 0.272347" />
       </geometry>
     </collision>
 
     <collision name="top_front">
-      <origin xyz="0.0 0.161236 1.386042" rpy="0.135030 0 0"/>
+      <origin xyz="0.0 0.161236 1.386042" rpy="0.135030 0 0" />
       <geometry>
-        <box size="1.279154 0.625988 0.171868"/>
+        <box size="1.279154 0.625988 0.171868" />
       </geometry>
     </collision>
 
     <collision name="top_rear">
-      <origin xyz="0.0 0.817696 1.360069" rpy="-0.068997 0 0"/>
+      <origin xyz="0.0 0.817696 1.360069" rpy="-0.068997 0 0" />
       <geometry>
-        <box size="1.285130 0.771189 0.226557"/>
+        <box size="1.285130 0.771189 0.226557" />
       </geometry>
     </collision>
 
     <collision name="rear_window">
-      <origin xyz="0.0 1.640531 1.175126" rpy="-0.262017 0 0"/>
+      <origin xyz="0.0 1.640531 1.175126" rpy="-0.262017 0 0" />
       <geometry>
-        <box size="1.267845 1.116344 0.244286"/>
+        <box size="1.267845 1.116344 0.244286" />
       </geometry>
     </collision>
 
     <collision name="trunk">
-      <origin xyz="0.0 1.637059 0.888180" rpy="0.0 0 0"/>
+      <origin xyz="0.0 1.637059 0.888180" rpy="0.0 0 0" />
       <geometry>
-        <box size="1.788064 1.138988 0.482746"/>
+        <box size="1.788064 1.138988 0.482746" />
       </geometry>
     </collision>
 
     <collision name="back_bumper">
-      <origin xyz="0.0 2.054454 0.577870" rpy="0.0 0 0"/>
+      <origin xyz="0.0 2.054454 0.577870" rpy="0.0 0 0" />
       <geometry>
-        <box size="1.781650 0.512093 0.581427"/>
+        <box size="1.781650 0.512093 0.581427" />
       </geometry>
     </collision>
 
     <inertial>
-      <mass value="1356.0"/>
-      <origin xyz="0 0 0.48" rpy="0 0 1.5708"/>
-      <inertia ixx="2581.13354740" ixy="0.0" ixz="0.0" iyy="591.30846112" iyz="0.0" izz="2681.95008628"/>
+      <mass value="1356.0" />
+      <origin xyz="0 0 0.48" rpy="0 0 1.5708" />
+      <inertia ixx="2581.13354740" ixy="0.0" ixz="0.0" iyy="591.30846112" iyz="0.0" izz="2681.95008628" />
     </inertial>
   </link>
   <link name="fl_axle">
     <inertial>
-      <mass value="1"/>
-      <origin xyz="0 0 0"/>
-      <inertia ixx="0.004" ixy="0.0" ixz="0.0" iyy="0.004" iyz="0.0" izz="0.004"/>
+      <mass value="1" />
+      <origin xyz="0 0 0" />
+      <inertia ixx="0.004" ixy="0.0" ixz="0.0" iyy="0.004" iyz="0.0" izz="0.004" />
     </inertial>
   </link>
   <link name="fr_axle">
     <inertial>
-      <mass value="1"/>
-      <origin xyz="0 0 0"/>
-      <inertia ixx="0.004" ixy="0.0" ixz="0.0" iyy="0.004" iyz="0.0" izz="0.004"/>
+      <mass value="1" />
+      <origin xyz="0 0 0" />
+      <inertia ixx="0.004" ixy="0.0" ixz="0.0" iyy="0.004" iyz="0.0" izz="0.004" />
     </inertial>
   </link>
   <link name="front_left_wheel">
     <inertial>
-      <mass value="11"/>
-      <origin xyz="0 0 0"/>
-      <inertia ixx="0.58631238" ixy="0.0" ixz="0.0" iyy="0.33552910" iyz="0.0" izz="0.33552910"/>
+      <mass value="11" />
+      <origin xyz="0 0 0" />
+      <inertia ixx="0.58631238" ixy="0.0" ixz="0.0" iyy="0.33552910" iyz="0.0" izz="0.33552910" />
     </inertial>
     <collision name="front_left_wheel_collision">
       <geometry>
-        <sphere radius="0.31265"/>
+        <sphere radius="0.31265" />
       </geometry>
     </collision>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://prius_description/meshes/wheel.obj" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://prius_description/meshes/wheel.obj" scale="0.01 0.01 0.01" />
       </geometry>
     </visual>
   </link>
   <link name="front_right_wheel">
     <inertial>
-      <mass value="11"/>
-      <origin xyz="0 0 0"/>
-      <inertia ixx="0.58631238" ixy="0.0" ixz="0.0" iyy="0.33552910" iyz="0.0" izz="0.33552910"/>
+      <mass value="11" />
+      <origin xyz="0 0 0" />
+      <inertia ixx="0.58631238" ixy="0.0" ixz="0.0" iyy="0.33552910" iyz="0.0" izz="0.33552910" />
     </inertial>
     <collision name="front_right_wheel_collision">
       <geometry>
-        <sphere radius="0.31265"/>
+        <sphere radius="0.31265" />
       </geometry>
     </collision>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://prius_description/meshes/wheel.obj" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://prius_description/meshes/wheel.obj" scale="0.01 0.01 0.01" />
       </geometry>
     </visual>
   </link>
   <link name="rear_left_wheel">
     <inertial>
-      <mass value="11"/>
-      <origin xyz="0 0 0"/>
-      <inertia ixx="0.58631238" ixy="0.0" ixz="0.0" iyy="0.33552910" iyz="0.0" izz="0.33552910"/>
+      <mass value="11" />
+      <origin xyz="0 0 0" />
+      <inertia ixx="0.58631238" ixy="0.0" ixz="0.0" iyy="0.33552910" iyz="0.0" izz="0.33552910" />
     </inertial>
     <collision name="rear_left_wheel_collision">
       <geometry>
-        <sphere radius="0.31265"/>
+        <sphere radius="0.31265" />
       </geometry>
     </collision>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://prius_description/meshes/wheel.obj" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://prius_description/meshes/wheel.obj" scale="0.01 0.01 0.01" />
       </geometry>
     </visual>
   </link>
   <link name="rear_right_wheel">
     <inertial>
-      <mass value="11"/>
-      <origin xyz="0 0 0"/>
-      <inertia ixx="0.58631238" ixy="0.0" ixz="0.0" iyy="0.33552910" iyz="0.0" izz="0.33552910"/>
+      <mass value="11" />
+      <origin xyz="0 0 0" />
+      <inertia ixx="0.58631238" ixy="0.0" ixz="0.0" iyy="0.33552910" iyz="0.0" izz="0.33552910" />
     </inertial>
     <collision name="rear_right_wheel_collision">
       <geometry>
-        <sphere radius="0.31265"/>
+        <sphere radius="0.31265" />
       </geometry>
     </collision>
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://prius_description/meshes/wheel.obj" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://prius_description/meshes/wheel.obj" scale="0.01 0.01 0.01" />
       </geometry>
     </visual>
   </link>
   <link name="steering_wheel">
     <inertial>
-      <mass value="1.0"/>
-      <inertia ixx="0.14583300" ixy="0.0" ixz="0.0" iyy="0.14583300" iyz="0.0" izz="0.125"/>
+      <mass value="1.0" />
+      <inertia ixx="0.14583300" ixy="0.0" ixz="0.0" iyy="0.14583300" iyz="0.0" izz="0.125" />
     </inertial>
     <visual>
-      <origin xyz="0 0 0" rpy="1.302101 0 0"/>
+      <origin xyz="0 0 0" rpy="1.302101 0 0" />
       <geometry>
-        <mesh filename="package://prius_description/meshes/steering_wheel.obj" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://prius_description/meshes/steering_wheel.obj" scale="0.01 0.01 0.01" />
       </geometry>
     </visual>
   </link>
 
   <joint name="steering_joint" type="continuous">
-    <origin xyz="0.357734 -0.627868 0.988243" rpy="-1.302101 0 0"/>
-    <parent link="chassis"/>
-    <child link="steering_wheel"/>
-    <axis xyz="0 0 1"/>
-    <limit lower="-7.85" upper="7.85" effort="10000000" velocity="1000000"/>
+    <origin xyz="0.357734 -0.627868 0.988243" rpy="-1.302101 0 0" />
+    <parent link="chassis" />
+    <child link="steering_wheel" />
+    <axis xyz="0 0 1" />
+    <limit lower="-7.85" upper="7.85" effort="10000000" velocity="1000000" />
   </joint>
 
   <joint name="front_left_steer_joint" type="continuous">
-    <parent link="chassis"/>
-    <child link="fl_axle"/>
-    <origin xyz="0.767 -1.41 0.3" rpy="0 0 0"/>
-    <axis xyz="0 0 1"/>
-    <limit lower="-0.8727" upper="0.8727" effort="10000000" velocity="1000000"/>
+    <parent link="chassis" />
+    <child link="fl_axle" />
+    <origin xyz="0.767 -1.41 0.3" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.8727" upper="0.8727" effort="10000000" velocity="1000000" />
   </joint>
   <joint name="front_right_steer_joint" type="continuous">
-    <parent link="chassis"/>
-    <child link="fr_axle"/>
-    <origin xyz="-0.767 -1.41 0.3" rpy="0 0 0"/>
-    <axis xyz="0 0 1"/>
-    <limit lower="-0.8727" upper="0.8727" effort="10000000" velocity="1000000"/>
+    <parent link="chassis" />
+    <child link="fr_axle" />
+    <origin xyz="-0.767 -1.41 0.3" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.8727" upper="0.8727" effort="10000000" velocity="1000000" />
   </joint>
   <joint name="front_left_wheel_joint" type="continuous">
-    <parent link="fl_axle"/>
-    <child link="front_left_wheel"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <axis xyz="1 0 0"/>
+    <parent link="fl_axle" />
+    <child link="front_left_wheel" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
   </joint>
   <joint name="front_right_wheel_joint" type="continuous">
-    <parent link="fr_axle"/>
-    <child link="front_right_wheel"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <axis xyz="1 0 0"/>
+    <parent link="fr_axle" />
+    <child link="front_right_wheel" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
   </joint>
   <joint name="rear_left_wheel_joint" type="continuous">
-    <parent link="chassis"/>
-    <child link="rear_left_wheel"/>
-    <origin xyz="0.793 1.45 0.3" rpy="0 0 0"/>
-    <axis xyz="1 0 0"/>
+    <parent link="chassis" />
+    <child link="rear_left_wheel" />
+    <origin xyz="0.793 1.45 0.3" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
   </joint>
   <joint name="rear_right_wheel_joint" type="continuous">
-    <parent link="chassis"/>
-    <child link="rear_right_wheel"/>
-    <origin xyz="-0.793 1.45 0.3" rpy="0 0 0"/>
-    <axis xyz="1 0 0"/>
+    <parent link="chassis" />
+    <child link="rear_right_wheel" />
+    <origin xyz="-0.793 1.45 0.3" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
   </joint>
 
 
   <!-- Sensor links and fixed joints -->
   <link name="center_laser_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="center_laser_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="center_laser_link"/>
-    <origin xyz="0 0.4 1.8" rpy="0 0 -1.5707"/>
+    <parent link="chassis" />
+    <child link="center_laser_link" />
+    <origin xyz="0 0.4 1.8" rpy="0 0 -1.5707" />
   </joint>
 
   <link name="front_left_laser_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="front_left_laser_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="front_left_laser_link"/>
-    <origin xyz="1 -2.3 0.5" rpy="0 0.05 0"/>
+    <parent link="chassis" />
+    <child link="front_left_laser_link" />
+    <origin xyz="1 -2.3 0.5" rpy="0 0.05 0" />
   </joint>
 
   <link name="front_right_laser_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="front_right_laser_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="front_right_laser_link"/>
-    <origin xyz="-1 -2.3 0.5" rpy="0 0.05 3.14"/>
+    <parent link="chassis" />
+    <child link="front_right_laser_link" />
+    <origin xyz="-1 -2.3 0.5" rpy="0 0.05 3.14" />
   </joint>
 
   <gazebo reference="base_link_connection">
@@ -306,190 +306,190 @@
 
   <link name="front_camera_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="front_camera_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="front_camera_link"/>
-    <origin xyz="0 -0.4 1.4" rpy="0 0.05 -1.5707"/>
+    <parent link="chassis" />
+    <child link="front_camera_link" />
+    <origin xyz="0 -0.4 1.4" rpy="0 0.05 -1.5707" />
   </joint>
   <link name="front_camera_link_optical">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="front_camera_optical_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707"/>
-    <parent link="front_camera_link"/>
-    <child link="front_camera_link_optical"/>
+    <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707" />
+    <parent link="front_camera_link" />
+    <child link="front_camera_link_optical" />
   </joint>
 
   <link name="back_camera_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="back_camera_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="back_camera_link"/>
-    <origin xyz="0 1.45 1.4" rpy="0 0.05 1.5707"/>
+    <parent link="chassis" />
+    <child link="back_camera_link" />
+    <origin xyz="0 1.45 1.4" rpy="0 0.05 1.5707" />
   </joint>
   <link name="back_camera_link_optical">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="back_camera_optical_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707"/>
-    <parent link="back_camera_link"/>
-    <child link="back_camera_link_optical"/>
+    <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707" />
+    <parent link="back_camera_link" />
+    <child link="back_camera_link_optical" />
   </joint>
 
   <link name="left_camera_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="left_camera_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="left_camera_link"/>
-    <origin xyz="1 -0.7 1.0" rpy="0 0.05 1.0"/>
+    <parent link="chassis" />
+    <child link="left_camera_link" />
+    <origin xyz="1 -0.7 1.0" rpy="0 0.05 1.0" />
   </joint>
   <link name="left_camera_link_optical">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="left_camera_optical_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707"/>
-    <parent link="left_camera_link"/>
-    <child link="left_camera_link_optical"/>
+    <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707" />
+    <parent link="left_camera_link" />
+    <child link="left_camera_link_optical" />
   </joint>
 
   <link name="right_camera_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="right_camera_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="right_camera_link"/>
-    <origin xyz="-1 -0.7 1.0" rpy="0 0.05 2.1416"/>
+    <parent link="chassis" />
+    <child link="right_camera_link" />
+    <origin xyz="-1 -0.7 1.0" rpy="0 0.05 2.1416" />
   </joint>
   <link name="right_camera_link_optical">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="right_camera_optical_joint" type="fixed">
-    <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707"/>
-    <parent link="right_camera_link"/>
-    <child link="right_camera_link_optical"/>
+    <origin xyz="0 0 0" rpy="-1.5707 0 -1.5707" />
+    <parent link="right_camera_link" />
+    <child link="right_camera_link_optical" />
   </joint>
 
   <link name="back_left_far_sonar_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="back_left_far_sonar_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="back_left_far_sonar_link"/>
-    <origin xyz="0.7 2.4 0.5" rpy="0 0 1.5707"/>
+    <parent link="chassis" />
+    <child link="back_left_far_sonar_link" />
+    <origin xyz="0.7 2.4 0.5" rpy="0 0 1.5707" />
   </joint>
 
   <link name="back_left_middle_sonar_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="back_left_middle_sonar_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="back_left_middle_sonar_link"/>
-    <origin xyz="0.24 2.4 0.5" rpy="0 0 1.5707"/>
+    <parent link="chassis" />
+    <child link="back_left_middle_sonar_link" />
+    <origin xyz="0.24 2.4 0.5" rpy="0 0 1.5707" />
   </joint>
 
   <link name="back_right_far_sonar_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="back_right_far_sonar_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="back_right_far_sonar_link"/>
-    <origin xyz="-0.7 2.4 0.5" rpy="0 0 1.5707"/>
+    <parent link="chassis" />
+    <child link="back_right_far_sonar_link" />
+    <origin xyz="-0.7 2.4 0.5" rpy="0 0 1.5707" />
   </joint>
 
   <link name="back_right_middle_sonar_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="back_right_middle_sonar_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="back_right_middle_sonar_link"/>
-    <origin xyz="-0.24 2.4 0.5" rpy="0 0 1.5707"/>
+    <parent link="chassis" />
+    <child link="back_right_middle_sonar_link" />
+    <origin xyz="-0.24 2.4 0.5" rpy="0 0 1.5707" />
   </joint>
 
   <link name="front_left_far_sonar_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="front_left_far_sonar_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="front_left_far_sonar_link"/>
-    <origin xyz="0.7 -2.1 0.5" rpy="0 0 -1.5707"/>
+    <parent link="chassis" />
+    <child link="front_left_far_sonar_link" />
+    <origin xyz="0.7 -2.1 0.5" rpy="0 0 -1.5707" />
   </joint>
 
   <link name="front_left_middle_sonar_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="front_left_middle_sonar_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="front_left_middle_sonar_link"/>
-    <origin xyz="0.24 -2.3 0.5" rpy="0 0 -1.5707"/>
+    <parent link="chassis" />
+    <child link="front_left_middle_sonar_link" />
+    <origin xyz="0.24 -2.3 0.5" rpy="0 0 -1.5707" />
   </joint>
 
   <link name="front_right_far_sonar_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="front_right_far_sonar_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="front_right_far_sonar_link"/>
-    <origin xyz="-0.7 -2.1 0.5" rpy="0 0 -1.5707"/>
+    <parent link="chassis" />
+    <child link="front_right_far_sonar_link" />
+    <origin xyz="-0.7 -2.1 0.5" rpy="0 0 -1.5707" />
   </joint>
 
   <link name="front_right_middle_sonar_link">
     <inertial>
-      <mass value="1"/>
-      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <mass value="1" />
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
   </link>
   <joint name="front_right_middle_sonar_joint" type="fixed">
-    <parent link="chassis"/>
-    <child link="front_right_middle_sonar_link"/>
-    <origin xyz="-0.24 -2.3 0.5" rpy="0 0 -1.5707"/>
+    <parent link="chassis" />
+    <child link="front_right_middle_sonar_link" />
+    <origin xyz="-0.24 -2.3 0.5" rpy="0 0 -1.5707" />
   </joint>
 
   <gazebo>
@@ -542,34 +542,43 @@
   </gazebo>
 
   <gazebo reference="center_laser_link">
-    <sensor name='center_laser_sensor' type='ray'>
+    <sensor type="gpu_ray" name="${name}-HDL32E">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>10</update_rate>
       <ray>
         <scan>
           <horizontal>
-            <samples>512</samples>
+            <samples>2187</samples>
             <resolution>1</resolution>
-            <min_angle>-3.14</min_angle>
-            <max_angle>3.14</max_angle>
+            <min_angle>-3.1415</min_angle>
+            <max_angle>3.1415</max_angle>
           </horizontal>
           <vertical>
-            <samples>16</samples>
-            <min_angle>-0.1</min_angle>
-            <max_angle>-0.35</max_angle>
+            <samples>32</samples>
+            <resolution>1</resolution>
+            <min_angle>-0.5352766944444446</min_angle>
+            <max_angle> 0.18622113888888892</max_angle>
           </vertical>
         </scan>
         <range>
-          <min>0.2</min>
-          <max>30</max>
-          <resolution>0.01</resolution>
+          <min>0.3</min>
+          <max>130.0</max>
+          <resolution>0.001</resolution>
         </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.0</stddev>
+        </noise>
       </ray>
-      <plugin name='center_laser' filename='libgazebo_ros_block_laser.so'>
-        <topicName>/prius/center_laser/scan</topicName>
+      <plugin name="gazebo_ros_laser_controller" filename="libgazebo_ros_velodyne_gpu_laser.so">
+        <topicName>velodyne</topicName>
         <frameName>center_laser_link</frameName>
+        <min_range>0.9</min_range>
+        <max_range>130.0</max_range>
+        <gaussianNoise>0.008</gaussianNoise>
       </plugin>
-      <always_on>1</always_on>
-      <update_rate>30</update_rate>
-      <visualize>0</visualize>
     </sensor>
   </gazebo>
 
@@ -596,7 +605,7 @@
         </range>
       </ray>
       <plugin name='front_left_laser' filename='libgazebo_ros_laser.so'>
-        <topicName>/prius/front_left_laser/scan</topicName>
+        <topicName>front_left_laser/scan</topicName>
         <frameName>front_left_laser_link</frameName>
       </plugin>
       <always_on>1</always_on>
@@ -628,7 +637,7 @@
         </range>
       </ray>
       <plugin name='front_right_laser' filename='libgazebo_ros_laser.so'>
-        <topicName>/prius/front_right_laser/scan</topicName>
+        <topicName>front_right_laser/scan</topicName>
         <frameName>front_right_laser_link</frameName>
       </plugin>
       <always_on>1</always_on>
@@ -660,9 +669,9 @@
       <plugin name="front_camera_controller" filename="libgazebo_ros_camera.so">
         <alwaysOn>false</alwaysOn>
         <updateRate>0.0</updateRate>
-        <cameraName>/prius/front_camera</cameraName>
+        <cameraName>front_camera</cameraName>
         <imageTopicName>image_raw</imageTopicName>
-        <cameraInfoTopicName>/prius/front_camera/camera_info</cameraInfoTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
         <frameName>front_camera_link_optical</frameName>
         <hackBaseline>0.07</hackBaseline>
         <distortionK1>0.0</distortionK1>
@@ -697,9 +706,9 @@
       <plugin name="back_camera_controller" filename="libgazebo_ros_camera.so">
         <alwaysOn>false</alwaysOn>
         <updateRate>0.0</updateRate>
-        <cameraName>/prius/back_camera</cameraName>
+        <cameraName>back_camera</cameraName>
         <imageTopicName>image_raw</imageTopicName>
-        <cameraInfoTopicName>/prius/back_camera/camera_info</cameraInfoTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
         <frameName>back_camera_link_optical</frameName>
         <hackBaseline>0.07</hackBaseline>
         <distortionK1>0.0</distortionK1>
@@ -734,9 +743,9 @@
       <plugin name="left_camera_controller" filename="libgazebo_ros_camera.so">
         <alwaysOn>false</alwaysOn>
         <updateRate>0.0</updateRate>
-        <cameraName>/prius/left_camera</cameraName>
+        <cameraName>left_camera</cameraName>
         <imageTopicName>image_raw</imageTopicName>
-        <cameraInfoTopicName>/prius/left_camera/camera_info</cameraInfoTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
         <frameName>left_camera_link_optical</frameName>
         <hackBaseline>0.07</hackBaseline>
         <distortionK1>0.0</distortionK1>
@@ -771,9 +780,9 @@
       <plugin name="right_camera_controller" filename="libgazebo_ros_camera.so">
         <alwaysOn>false</alwaysOn>
         <updateRate>0.0</updateRate>
-        <cameraName>/prius/right_camera</cameraName>
+        <cameraName>right_camera</cameraName>
         <imageTopicName>image_raw</imageTopicName>
-        <cameraInfoTopicName>/prius/right_camera/camera_info</cameraInfoTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
         <frameName>right_camera_link_optical</frameName>
         <hackBaseline>0.07</hackBaseline>
         <distortionK1>0.0</distortionK1>
@@ -1041,4 +1050,5 @@
       <visualize>0</visualize>
     </sensor>
   </gazebo>
+
 </robot>
