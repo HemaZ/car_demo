@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="model" default="$(find prius_description)/urdf/prius.urdf" />
+    <arg name="rvizconfig" default="$(find car_demo)/rviz/demo.rviz" />
+
+    <!-- Take topic names as arguments from YonoArc -->
+    <arg name="front_camera" default="/prius1/front_camera/image_raw" />
+    <arg name="back_camera" default="/prius1/back_camera/image_raw" />
+    <arg name="back_camera_info" default="/prius1/back_camera/camera_info" />
+    <arg name="front_camera_info" default="/prius1/front_camera/camera_info" />
+    <arg name="right_camera" default="/prius1/right_camera/image_raw" />
+    <arg name="left_camera" default="/prius1/left_camera/image_raw" />
+    <arg name="center_laser" default="/prius1/velodyne" />
+    <arg name="front_left_laser" default="/prius1/front_left_laser/scan" />
+    <arg name="front_right_laser" default="/prius1/front_right_laser/scan" />
+    <!-- Car Location -->
+    <arg name="x" default="3" />
+    <arg name="y" default="-12" />
+
+    <!-- Remap Topics based on YonoArc's arguments -->
+    <remap from="/prius1/front_camera/image_raw" to="$(arg front_camera)" />
+    <remap from="/prius1/back_camera/image_raw" to="$(arg back_camera)" />
+    <remap from="/prius1/right_camera/image_raw" to="$(arg right_camera)" />
+    <remap from="/prius1/left_camera/image_raw" to="$(arg left_camera)" />
+    <remap from="/prius1/back_camera/camera_info" to="$(arg back_camera_info)" />
+    <remap from="/prius1/front_camera/camera_info" to="$(arg front_camera_info)" />
+    <remap from="/prius1/velodyne" to="$(arg center_laser)" />
+    <remap from="/prius1/front_left_laser/scan" to="$(arg front_left_laser)" />
+    <remap from="/prius1/front_right_laser/scan" to="$(arg front_right_laser)" />
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="verbose" value="true" />
+        <arg name="world_name" value="$(find car_demo)/worlds/mcity.world" />
+        <arg name="gui" value="true" />
+    </include>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
