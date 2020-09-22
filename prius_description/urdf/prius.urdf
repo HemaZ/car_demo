@@ -542,7 +542,7 @@
   </gazebo>
 
   <gazebo reference="center_laser_link">
-    <sensor type="gpu_ray" name="${name}-HDL32E">
+    <sensor type="ray" name="${name}-HDL32E">
       <pose>0 0 0 0 0 0</pose>
       <visualize>false</visualize>
       <update_rate>10</update_rate>
@@ -572,7 +572,7 @@
           <stddev>0.0</stddev>
         </noise>
       </ray>
-      <plugin name="gazebo_ros_laser_controller" filename="libgazebo_ros_velodyne_gpu_laser.so">
+      <plugin name="gazebo_ros_laser_controller" filename="libgazebo_ros_velodyne_laser.so">
         <topicName>velodyne</topicName>
         <frameName>center_laser_link</frameName>
         <min_range>0.9</min_range>
