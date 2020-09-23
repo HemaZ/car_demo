@@ -264,16 +264,58 @@
 
 
   <!-- Sensor links and fixed joints -->
+
   <link name="center_laser_link">
+    <inertial>
+      <mass value="0.83" />
+      <origin xyz="0 0 0.03585" />
+      <inertia ixx="0.000908059425" ixy="0" ixz="0" iyy="0.000908059425" iyz="0" izz="0.0011049624" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://velodyne_description/meshes/VLP16_base_1.dae" />
+      </geometry>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="package://velodyne_description/meshes/VLP16_base_2.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0.03585" />
+      <geometry>
+        <cylinder radius="0.0516" length="0.0717" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="vlp_16">
+    <inertial>
+      <mass value="0.01" />
+      <origin xyz="0 0 0" />
+      <inertia ixx="1e-7" ixy="0" ixz="0" iyy="1e-7" iyz="0" izz="1e-7" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.0377" />
+      <geometry>
+        <mesh filename="package://velodyne_description/meshes/VLP16_scan.dae" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="vlp16_base_scan_joint" type="fixed">
+    <origin xyz="0 0 0.0377" rpy="0 0 0" />
+    <parent link="center_laser_link" />
+    <child link="vlp_16" />
+  </joint>
+  <!-- <link name="center_laser_link">
     <inertial>
       <mass value="1" />
       <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
     </inertial>
-  </link>
+  </link> -->
   <joint name="center_laser_joint" type="fixed">
     <parent link="chassis" />
     <child link="center_laser_link" />
-    <origin xyz="0 0.4 1.8" rpy="0 0 -1.5707" />
+    <origin xyz="0 0.4 1.5" rpy="0 0 -1.5707" />
   </joint>
 
   <link name="front_left_laser_link">
@@ -542,23 +584,23 @@
   </gazebo>
 
   <gazebo reference="center_laser_link">
-    <sensor type="ray" name="${name}-HDL32E">
+    <sensor type="ray" name="${name}-VLP-16">
       <pose>0 0 0 0 0 0</pose>
       <visualize>false</visualize>
       <update_rate>10</update_rate>
       <ray>
         <scan>
           <horizontal>
-            <samples>2187</samples>
+            <samples>1875</samples>
             <resolution>1</resolution>
             <min_angle>-3.1415</min_angle>
             <max_angle>3.1415</max_angle>
           </horizontal>
           <vertical>
-            <samples>32</samples>
+            <samples>16</samples>
             <resolution>1</resolution>
-            <min_angle>-0.5352766944444446</min_angle>
-            <max_angle> 0.18622113888888892</max_angle>
+            <min_angle>-0.261799388</min_angle>
+            <max_angle> 0.261799388</max_angle>
           </vertical>
         </scan>
         <range>
