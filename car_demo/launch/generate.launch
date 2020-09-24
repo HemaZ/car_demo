@@ -27,7 +27,7 @@
     <remap from="/prius1/velodyne" to="$(arg center_laser)" />
     <remap from="/prius1/front_left_laser/scan" to="$(arg front_left_laser)" />
     <remap from="/prius1/front_right_laser/scan" to="$(arg front_right_laser)" /> -->
-
+    <param name="robot_description" textfile="$(arg model)" />
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="verbose" value="true" />
         <arg name="world_name" value="$(find car_demo)/worlds/mcity.world" />
