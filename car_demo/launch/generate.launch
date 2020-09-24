@@ -18,7 +18,7 @@
     <arg name="y" default="-12" />
 
     <!-- Remap Topics based on YonoArc's arguments -->
-    <remap from="/prius1/front_camera/image_raw" to="$(arg front_camera)" />
+    <!-- <remap from="/prius1/front_camera/image_raw" to="$(arg front_camera)" />
     <remap from="/prius1/back_camera/image_raw" to="$(arg back_camera)" />
     <remap from="/prius1/right_camera/image_raw" to="$(arg right_camera)" />
     <remap from="/prius1/left_camera/image_raw" to="$(arg left_camera)" />
@@ -26,7 +26,7 @@
     <remap from="/prius1/front_camera/camera_info" to="$(arg front_camera_info)" />
     <remap from="/prius1/velodyne" to="$(arg center_laser)" />
     <remap from="/prius1/front_left_laser/scan" to="$(arg front_left_laser)" />
-    <remap from="/prius1/front_right_laser/scan" to="$(arg front_right_laser)" />
+    <remap from="/prius1/front_right_laser/scan" to="$(arg front_right_laser)" /> -->
 
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
         <arg name="verbose" value="true" />
