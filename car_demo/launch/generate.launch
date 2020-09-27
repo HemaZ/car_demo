@@ -15,7 +15,7 @@
     <arg name="front_right_laser" default="/prius1/front_right_laser/scan" /> -->
     <!-- Car Location -->
     <!-- <arg name="x" default="3" /> -->
-    <!-- <arg name="y" default="-12" /> -->
+    <arg name="y" default="-12" />
 
     <!-- Remap Topics based on YonoArc's arguments -->
     <!-- <remap from="/prius1/front_camera/image_raw" to="$(arg front_camera)" />
