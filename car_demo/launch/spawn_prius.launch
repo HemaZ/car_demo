@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="model" default="$(find prius_description)/urdf/prius.urdf" />
+    <!-- Take topic names as arguments from YonoArc -->
+    <arg name="block_id" default="b12" />
+    <!-- Car Location -->
+    <arg name="x" default="3" />
+    <arg name="y" default="-12" />
+
+
+    <group ns="$(arg block_id)">
+        <param name="robot_description" textfile="$(arg model)" />
+        <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
+            <param name="publish_frequency" type="double" value="50.0" />
+            <param name="tf_prefix" value="$(arg block_id)" />
+        </node>
+        <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model $(arg block_id) -x $(arg x) -y $(arg y) -z 0.5 -param robot_description" />
+    </group>
+
+</launch>
